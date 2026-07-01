@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Showcase | DataofKayHowse.com</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="light-mode">
+  <header class="hero-nav">
+    <div class="container nav-shell">
+      <a class="brand" href="../index.html"><img class="site-logo" src="../Logo.jpg" alt="Data of Kay Howse logo" /> Data of Kay Howse</a>
+      <nav class="nav-list">
+        <a class="nav-link" href="../about.html">About</a>
+        <a class="nav-link" href="../psych-analytics.html">Psych Analytics</a>
+        <a class="nav-link" href="../experience.html">Experience</a>
+        <a class="nav-link" href="../dashboard.html">Dashboard</a>
+        <a class="nav-link" href="index.html">Showcase</a>
+        <a class="nav-link" href="../contact.html">Contact</a>
+        <button class="toggle-button" type="button"><span class="mode-label">Light mode</span></button>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section class="section">
+      <div class="section-card">
+        <h2 class="section-title">Coding Showcase</h2>
+        <p class="section-intro">Here is an example of the Python code I use to analyze behavioral health data and create actionable visuals.</p>
+        <div class="code-block"><pre>import pandas as pd
+import matplotlib.pyplot as plt
+
+data = pd.read_csv("mental_health.csv")
+summary = data.groupby("Gender")["Anxiety"].mean()
+summary.plot(kind="bar", color="#0f69ff")
+plt.title("Average Anxiety Scores")
+plt.ylabel("Anxiety score")
+plt.tight_layout()
+plt.show()</pre></div>
+        <p class="text-muted">This code reads a mental health dataset, calculates average anxiety by gender, then creates a clear bar chart to communicate findings. It demonstrates combining data cleaning, grouping, and visualization to support insight-driven decisions.</p>
+      </div>
+    </section>
+  </main>
+  <script src="../script.js"></script>
+</body>
+</html>

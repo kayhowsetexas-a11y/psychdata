@@ -3,56 +3,184 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PsychData | Behavioral Health Analytics</title>
-  <style>
-    :root { --bg:#f4f7fb; --card:#ffffff; --text:#172033; --muted:#5b6474; --accent:#2563eb; }
-    * { box-sizing: border-box; }
-    body { font-family: Arial, Helvetica, sans-serif; margin: 0; background: linear-gradient(135deg, #eef4ff, var(--bg)); color: var(--text); }
-    .container { max-width: 980px; margin: 0 auto; padding: 40px 20px 60px; }
-    .card { background: var(--card); border-radius: 16px; padding: 28px; box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08); }
-    h1 { margin: 0 0 10px; font-size: 2rem; }
-    p { color: var(--muted); line-height: 1.6; }
-    .buttons { margin: 20px 0 12px; }
-    .btn { display: inline-block; padding: 10px 16px; background: var(--accent); color: white; text-decoration: none; border-radius: 8px; margin-right: 10px; }
-    .btn.secondary { background: #0f172a; }
-    .grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 20px; margin-top: 22px; }
-    .panel { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; }
-    img { width: 100%; border-radius: 12px; margin-top: 20px; border: 1px solid #e5e7eb; }
-    ul { padding-left: 18px; color: var(--muted); }
-  </style>
+  <title>DataofKayHowse.com | Behavioral Health Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <div class="container">
-    <div class="card">
-      <h1>PsychData</h1>
-      <p>A behavioral health analytics project using Python, SQL, and data visualization to explore mental health disparities across racial and ethnic groups.</p>
-      <div class="buttons">
-        <a class="btn" href="https://github.com/KayHowse" target="_blank">View on GitHub</a>
-        <a class="btn secondary" href="README.md">Read the README</a>
-      </div>
-
-      <div class="grid">
-        <div class="panel">
-          <h3>Project focus</h3>
-          <ul>
-            <li>Compares service utilization, access, and treatment across groups</li>
-            <li>Highlights stigma and self-advocacy factors influencing care</li>
-            <li>Shows how Python and SQL can support public-health-style analysis</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h3>Skills demonstrated</h3>
-          <ul>
-            <li>Python data analysis</li>
-            <li>SQLite database design and SQL queries</li>
-            <li>Data visualization with Matplotlib</li>
-            <li>Clear project documentation for employers</li>
-          </ul>
-        </div>
-      </div>
-
-      <img src="psychdata_ethnic_comparison.png" alt="PsychData chart showing mental health disparities" />
+<body class="light-mode">
+  <header class="hero-nav">
+    <div class="container nav-shell">
+      <a class="brand" href="#home"><img class="site-logo" src="Logo.jpg" alt="Data of Kay Howse logo" /> Data of Kay Howse</a>
+      <nav class="nav-list">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#psych-analytics">Psych Analytics</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#dashboard">Dashboard</a>
+        <a class="nav-link" href="showcase/">Showcase</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <button class="toggle-button" type="button"><span class="mode-label">Light mode</span></button>
+      </nav>
     </div>
-  </div>
+  </header>
+
+  <main class="container">
+    <section id="home" class="hero">
+      <div class="hero-grid">
+        <div class="hero-card">
+          <p class="text-muted">Behavioral health operations | Crisis intervention | Psych analytics</p>
+          <h1 class="hero-title">Hello, I'm <strong>Kay Howse</strong>.</h1>
+          <p class="hero-subtitle">A psychology student, crisis intervention counselor, and aspiring behavioral health data analyst. Preparing for MSW studies in January 2027 and driven to use data for equitable mental health care.</p>
+          <div class="hero-badges">
+            <span class="badge">Psychology Student</span>
+            <span class="badge">Crisis Intervention Counselor</span>
+            <span class="badge">MSW Candidate 2027</span>
+            <span class="badge">Data & Operations Leader</span>
+          </div>
+          <div class="hero-actions">
+            <a class="btn" href="#dashboard">View dashboard</a>
+            <a class="btn secondary" href="https://github.com/kayhowsetexas-a11y/psychdata" target="_blank">See project</a>
+          </div>
+          <div class="hero-meta">
+            <span>First-generation college student</span>
+            <span>Wife and mother</span>
+            <span>Passionate about helping people through crisis support</span>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="Bio3.jpg" alt="Professional portrait of Kay Howse" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-card">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-intro">I am a first-generation college student, wife, mother, and aspiring behavioral health leader pursuing a Bachelor's degree in Psychology. Currently working as a Crisis Intervention Counselor, I support people through vulnerable moments and use that experience to build compassionate systems for care.</p>
+        <div class="bio-gallery">
+          <img src="Aboutme.jpg" alt="About me photo 1" />
+          <img src="Aboutme1.jpg" alt="About me photo 2" />
+          <img src="Aboutme2.jpg" alt="About me photo 3" />
+        </div>
+        <div class="row row-2">
+          <div class="section-panel">
+            <h3>Why psychology matters</h3>
+            <p class="text-muted">Psychology helps me understand how people think, feel, and respond to stress. It also gives me the tools to blend empathy with evidence-based decision-making so that mental health care is more accessible and respectful.</p>
+          </div>
+          <div class="section-panel">
+            <h3>My guiding values</h3>
+            <ul class="section-list">
+              <li>Faith-driven compassion</li>
+              <li>People-first leadership</li>
+              <li>Equity in care</li>
+              <li>Data-informed systems</li>
+            </ul>
+          </div>
+        </div>
+        <p class="section-intro">Working in crisis intervention changed my perspective by showing me how urgent mental health needs are, especially for people who feel unheard. This is why I want to use data and operations expertise to improve systems, reduce disparities, and help teams deliver better support.</p>
+      </div>
+    </section>
+
+    <section id="psych-analytics" class="section">
+      <div class="section-card">
+        <h2 class="section-title">What is Psych Analytics?</h2>
+        <p class="section-intro">Psych analytics combines psychology, data analysis, and technology to better understand human behavior, improve mental health services, reduce disparities, and help organizations make evidence-based decisions.</p>
+        <div class="grid">
+          <div class="section-panel">
+            <h3>Human-centered insight</h3>
+            <p class="text-muted">It uses data to reveal patterns in how people experience stress, treatment access, and outcomes. This helps teams make smarter choices that support real needs.</p>
+          </div>
+          <div class="section-panel">
+            <h3>Operational improvement</h3>
+            <p class="text-muted">Psych analytics helps measure workforce gaps, care availability, and service equity so systems can prioritize the communities that need help most.</p>
+          </div>
+          <div class="section-panel">
+            <h3>Technology with purpose</h3>
+            <p class="text-muted">The tools include dashboards, interactive charts, and predictive insights that turn data into clear action.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="section-card">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item"><strong>Education</strong><span class="text-muted">Psychology degree in progress with plans to begin MSW in January 2027.</span></div>
+          <div class="timeline-item"><strong>Crisis Intervention</strong><span class="text-muted">Supporting individuals through urgent mental health crises with compassion and rapid response.</span></div>
+          <div class="timeline-item"><strong>Leadership</strong><span class="text-muted">Leading by example in clinical settings and helping teams stay grounded under pressure.</span></div>
+          <div class="timeline-item"><strong>Operations</strong><span class="text-muted">Improving workflow, tracking outcomes, and helping systems serve people more effectively.</span></div>
+          <div class="timeline-item"><strong>Future MSW</strong><span class="text-muted">Preparing for graduate study focused on clinical practice, systems change, and policy-informed care.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dashboard" class="section">
+      <div class="section-card">
+        <h2 class="section-title">Interactive Data Dashboard</h2>
+        <p class="section-intro">Explore sample mental health trends and disparities through interactive charts that highlight prevalence, access gaps, and workforce shortages.</p>
+        <div class="chart-set">
+          <div class="chart-panel">
+            <h3>Mental health prevalence by age</h3>
+            <canvas id="trendChart"></canvas>
+            <p>Shows how depression and anxiety rates vary across age groups.</p>
+          </div>
+          <div class="chart-panel">
+            <h3>Access to care by race/ethnicity</h3>
+            <canvas id="raceChart"></canvas>
+            <p>Illustrates disparities in access to behavioral health support.</p>
+          </div>
+          <div class="chart-panel">
+            <h3>Behavioral health workforce outlook</h3>
+            <canvas id="careChart"></canvas>
+            <p>Highlights the workforce shortage driving unmet mental health needs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="showcase" class="section">
+      <div class="section-card">
+        <h2 class="section-title">Coding Showcase</h2>
+        <p class="section-intro">Here is an example of the Python code I use to analyze behavioral health data and create actionable visuals.</p>
+        <div class="code-block"><pre>import pandas as pd
+import matplotlib.pyplot as plt
+
+data = pd.read_csv("mental_health.csv")
+summary = data.groupby("Gender")["Anxiety"].mean()
+summary.plot(kind="bar", color="#0f69ff")
+plt.title("Average Anxiety Scores")
+plt.ylabel("Anxiety score")
+plt.tight_layout()
+plt.show()</pre></div>
+        <p class="text-muted">This code reads a mental health dataset, calculates average anxiety by gender, then creates a clear bar chart to communicate findings. It demonstrates combining data cleaning, grouping, and visualization to support insight-driven decisions.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-intro">Let's connect about behavioral health operations, psych analytics, or graduate study opportunities.</p>
+          <ul class="contact-list">
+            <li><a href="https://www.linkedin.com/in/kay-howse-psychanalyticsana" target="_blank">LinkedIn: https://www.linkedin.com/in/kay-howse-psychanalyticsana</a></li>
+            <li><a href="https://github.com/kayhowsetexas-a11y/psychdata" target="_blank">GitHub: https://github.com/kayhowsetexas-a11y/psychdata</a></li>
+            <li><a href="mailto:kayhowsetexas@gmail.com">Email: kayhowsetexas@gmail.com</a></li>
+            <li><a href="KayHowsePA.pdf" target="_blank" rel="noopener">Download Resume</a></li>
+            <li><a href="KayHowsePA.CL.pdf" target="_blank" rel="noopener">Download Cover Letter</a></li>
+          </ul>
+        </div>
+        <div class="section-panel">
+          <h3>My mission</h3>
+          <p class="text-muted">My mission is to transform behavioral health by combining psychology, technology, data analytics, and compassionate leadership to create solutions that improve lives and strengthen communities.</p>
+          <p class="text-muted"><em>Faith drives my purpose. Compassion guides my service. Data empowers my decisions.</em></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
