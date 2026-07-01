@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kay Howse | Resume</title>
+  <meta name="description" content="Resume for Kay Howse, psychology undergraduate, crisis intervention counselor, and behavioral health operations professional." />
+  <style>
+    :root {
+      --bg: #06111f;
+      --card: #0d1726;
+      --card-soft: #111d30;
+      --text: #f7fbff;
+      --muted: #b8c2d4;
+      --line: rgba(255, 255, 255, 0.12);
+      --accent: #7cc4ff;
+      --accent-2: #88d9a8;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(124, 196, 255, 0.18), transparent 28%),
+        radial-gradient(circle at top right, rgba(136, 217, 168, 0.13), transparent 26%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); }
+    a:hover { color: #b8e0ff; }
+
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 28px 20px 56px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 22px;
+      padding: 8px 0 0;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: grid;
+      gap: 4px;
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .brand p {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip, .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .chip { color: var(--text); background: rgba(255, 255, 255, 0.04); }
+    .button { background: linear-gradient(135deg, var(--accent), #4da3f7); color: #08111c; border-color: transparent; }
+    .button.secondary { background: rgba(255, 255, 255, 0.04); color: var(--text); }
+
+    .hero {
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 20px;
+    }
+
+    .summary {
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+
+    .summary h2 {
+      margin: 0;
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    .summary p { margin: 0; color: var(--muted); }
+
+    .meta-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .meta-card strong { display: block; margin-bottom: 4px; }
+    .meta-card a { word-break: break-word; overflow-wrap: anywhere; }
+
+    .content {
+      display: grid;
+      gap: 18px;
+    }
+
+    .section-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+
+    .section-card h3 {
+      margin: 0 0 14px;
+      font-size: 1.4rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-card h4 {
+      margin: 0 0 8px;
+      font-size: 1.02rem;
+    }
+
+    .muted { color: var(--muted); }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .list li { margin: 8px 0; }
+
+    .timeline {
+      display: grid;
+      gap: 16px;
+    }
+
+    .timeline-item {
+      padding: 18px;
+      border-radius: 18px;
+      background: var(--card-soft);
+      border: 1px solid var(--line);
+    }
+
+    .timeline-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: baseline;
+      margin-bottom: 10px;
+    }
+
+    .timeline-top span { color: var(--accent-2); font-weight: 700; }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: rgba(136, 217, 168, 0.12);
+      color: var(--text);
+      border: 1px solid rgba(136, 217, 168, 0.2);
+      font-size: 0.92rem;
+    }
+
+    .footer-note {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 18px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .page { padding: 20px 14px 42px; }
+      .hero { padding: 20px; }
+      .section-card { padding: 20px; }
+    }
+
+    @media (max-width: 640px) {
+      .topbar { align-items: flex-start; }
+      .chip-row { width: 100%; }
+      .button, .chip { width: 100%; }
+    }
+
+    @media print {
+      body { background: #fff; color: #000; }
+      .page { max-width: none; padding: 0; }
+      .chip-row, .button { display: none !important; }
+      .hero, .section-card, .timeline-item, .meta-card {
+        box-shadow: none;
+        background: #fff;
+        color: #000;
+        border-color: #d0d0d0;
+      }
+      .muted, .list { color: #000; }
+      a { color: #000; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div class="brand">
+        <h1>Kay Howse</h1>
+        <p>Senior B.S. Psychology Undergraduate | Crisis Intervention | Leadership | Operations | Data Analytics</p>
+      </div>
+      <div class="chip-row">
+        <a class="button" href="https://github.com/kayhowsetexas-a11y/psychdata" target="_blank" rel="noopener">Project Repository</a>
+        <a class="button secondary" href="showcase/" target="_blank" rel="noopener">Portfolio Site</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="summary">
+          <h2>Target Role: Crisis Intervention, Supervisor, Leadership, Operations, Data Analytics</h2>
+          <p>Provided crisis intervention, emotional support, and active listening to individuals experiencing emotional distress, suicidal ideation, anxiety, depression, grief, and other mental health concerns. Experienced in risk assessment, de-escalation, documentation, care coordination, and process improvement.</p>
+          <p class="muted">Reference available upon request.</p>
+        </div>
+        <aside class="meta-card">
+          <div>
+            <strong>Phone</strong>
+            <div><a href="tel:+17194018006">719-401-8006</a></div>
+          </div>
+          <div>
+            <strong>Email</strong>
+            <div><a href="mailto:kayhowsetexas@gmail.com">kayhowsetexas@gmail.com</a></div>
+          </div>
+          <div>
+            <strong>Address</strong>
+            <div>2806 Silver Charm, Houston, Texas 77014</div>
+          </div>
+          <div>
+            <strong>LinkedIn</strong>
+            <div><a href="https://www.linkedin.com/in/kay-howse-psychanalyticsana" target="_blank" rel="noopener">www.linkedin.com/in/kay-howse-psychanalyticsana</a></div>
+          </div>
+          <div>
+            <strong>Website &amp; Bio</strong>
+            <div><a href="https://kayhowsetexas-a11y.github.io/psychdata/" target="_blank" rel="noopener">kayhowsetexas-a11y.github.io/psychdata</a></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="grid-2">
+        <article class="section-card">
+          <h3>Education</h3>
+          <div class="timeline-item">
+            <div class="timeline-top">
+              <strong>Bachelor of Science - Psychology</strong>
+              <span>Projected Graduation: December 2026</span>
+            </div>
+            <div>University of Houston - Downtown</div>
+          </div>
+          <div class="tag-row">
+            <span class="tag">Abnormal Psychology</span>
+            <span class="tag">Developmental Psychology</span>
+            <span class="tag">Advanced Research Methods &amp; Statistics</span>
+            <span class="tag">Mental Health &amp; Human Behavior</span>
+            <span class="tag">Sociology of Community Systems</span>
+            <span class="tag">Leadership</span>
+          </div>
+        </article>
+
+        <article class="section-card">
+          <h3>Focused Coursework &amp; Skills</h3>
+          <ul class="list">
+            <li>Coaching and mentoring</li>
+            <li>Communication</li>
+            <li>Process standardisation</li>
+            <li>Quality improvement</li>
+            <li>Team development</li>
+            <li>Data Entry &amp; Analytics: Spreadsheet, GitHub, SQL, Tableau, Data Visualisation</li>
+          </ul>
+        </article>
+      </div>
+
+      <section class="section-card">
+        <h3>Experience</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-top">
+              <strong>Safety, Crisis Response &amp; Behavioral Management</strong>
+              <span>2020 - Present</span>
+            </div>
+            <div class="muted">Remote &amp; Client-Facing Environments</div>
+            <ul class="list">
+              <li>Provided empathetic, solution-focused support to individuals navigating sensitive, high-stress life situations.</li>
+              <li>Maintained professionalism, emotional awareness, and confidentiality in high-trust interactions.</li>
+              <li>Helped clients understand complex information using clear, accessible, non-judgmental language.</li>
+              <li>Supported scheduling, follow-up, and documentation workflows in structured environments.</li>
+              <li>Demonstrated calm, grounded presence in emotionally charged conversations.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-top">
+              <strong>Client Support &amp; Care Coordination Experience</strong>
+              <span>Additional Experience</span>
+            </div>
+            <ul class="list">
+              <li>Focused on building trust, maintaining communication, and coordinating services for clients in need of support.</li>
+              <li>Used clear follow-up and organized workflow management to support service continuity.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-top">
+              <strong>Crisis Intervention Counselor &amp; Certificates</strong>
+              <span>2026 – Present</span>
+            </div>
+            <ul class="list">
+              <li>Provided crisis intervention and emotional support to individuals in distress.</li>
+              <li>Conducted risk assessments, de-escalation, and completed contact summary reports.</li>
+              <li>Assessed risk factors and developed effective safety plans for individuals experiencing a crisis.</li>
+              <li>Trained, coached, and supported new hires.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="grid-2">
+        <section class="section-card">
+          <h3>Certifications</h3>
+          <ul class="list">
+            <li>Lifeline - Fundamentals of Crisis Counseling</li>
+            <li>Lifeline - Essential Skills in Crisis Counseling</li>
+            <li>Lifeline - Assessing Safety and Suicide Risk</li>
+            <li>Lifeline - Imminent Risk of Suicide</li>
+            <li>Lifeline - Supporting Teenagers in Crisis</li>
+            <li>Lifeline - Cultural Responsiveness in Crisis Counseling</li>
+            <li>American Heart Association Heartsaver® First Aid, CPR &amp; AED</li>
+            <li>Adult CPR/AED</li>
+            <li>Child CPR/AED</li>
+            <li>Infant CPR/AED</li>
+            <li>Prevention and Intervention of Aggressive Behavior (8 CEU Hours)</li>
+          </ul>
+        </section>
+
+        <section class="section-card">
+          <h3>Data Analysis</h3>
+          <div class="timeline-item">
+            <strong>Data Analysis Certification - Coursera</strong>
+            <p class="muted" style="margin: 8px 0 0;">Analytical training that supports reporting, process improvement, and evidence-based decision making.</p>
+          </div>
+          <div class="tag-row" style="margin-top: 14px;">
+            <span class="tag">GitHub</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Tableau</span>
+            <span class="tag">Data Visualization</span>
+            <span class="tag">Spreadsheet Analysis</span>
+          </div>
+        </section>
+      </div>
+
+      <section class="section-card">
+        <h3>Child Welfare, Foster Care &amp; Family Services Certifications</h3>
+        <ul class="list">
+          <li>Mandatory Reporting: Community Response for Youth and Families</li>
+          <li>Medical Consent Training for Caregivers</li>
+          <li>Psychotropic Medication for Children in Texas Foster Care</li>
+          <li>Preventing and Recognizing Sexual Abuse and Victimization of Youth in Foster Care</li>
+          <li>Need for Normalcy: Training for Foster Parents</li>
+          <li>Role in Reunification (4Kids4Families)</li>
+          <li>Runaway Prevention</li>
+          <li>Universal Human Trafficking Prevention – Train the Trainer</li>
+          <li>Trauma and Trauma-Informed Care</li>
+        </ul>
+      </section>
+
+      <section class="section-card">
+        <h3>Professional Profile</h3>
+        <p class="muted">Keen focus on crisis support, behavioral health operations, and compassionate leadership. Experienced in maintaining confidentiality, supporting emotionally charged conversations, documenting interactions accurately, and collaborating with supervisors and clinical leadership to ensure quality care and continuity.</p>
+        <p class="muted">Applied motivational interviewing, validation, grounding techniques, problem-solving interventions, and suicide prevention best practices when responding to individuals at high risk or in acute distress. Supported adolescents, adults, and vulnerable populations in crisis while maintaining a calm, supportive presence.</p>
+      </section>
+    </section>
+
+    <div class="footer-note">© Kay Howse • Resume page for public viewing and printing</div>
+  </main>
+</body>
+</html>
