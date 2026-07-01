@@ -1,0 +1,4 @@
+About
+=====
+
+I am a data-focused developer interested in using Python, SQL, and visualization to explore public health, behavioral health, and equity-related questions. My work centers on turning complex data into clear, meaningful insights that support better decision-making and more equitable outcomes.

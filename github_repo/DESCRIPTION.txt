@@ -1,0 +1,3 @@
+PsychDataAI
+
+A behavioral health analytics project using Python, SQL, and data visualization to explore mental health disparities across racial and ethnic groups.

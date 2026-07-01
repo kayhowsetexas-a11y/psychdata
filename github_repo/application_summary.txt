@@ -1,0 +1,1 @@
+PsychDataAI is a behavioral health analytics project that uses Python, SQL, and data visualization to explore mental health disparities across racial and ethnic groups. The project demonstrates skills in data analysis, database querying, visual storytelling, and communicating insights related to equity, stigma, and access to care.
