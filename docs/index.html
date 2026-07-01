@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PsychData | Behavioral Health Analytics</title>
+  <style>
+    :root { --bg:#f4f7fb; --card:#ffffff; --text:#172033; --muted:#5b6474; --accent:#2563eb; }
+    * { box-sizing: border-box; }
+    body { font-family: Arial, Helvetica, sans-serif; margin: 0; background: linear-gradient(135deg, #eef4ff, var(--bg)); color: var(--text); }
+    .container { max-width: 980px; margin: 0 auto; padding: 40px 20px 60px; }
+    .card { background: var(--card); border-radius: 16px; padding: 28px; box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08); }
+    h1 { margin: 0 0 10px; font-size: 2rem; }
+    p { color: var(--muted); line-height: 1.6; }
+    .buttons { margin: 20px 0 12px; }
+    .btn { display: inline-block; padding: 10px 16px; background: var(--accent); color: white; text-decoration: none; border-radius: 8px; margin-right: 10px; }
+    .btn.secondary { background: #0f172a; }
+    .grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 20px; margin-top: 22px; }
+    .panel { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; }
+    img { width: 100%; border-radius: 12px; margin-top: 20px; border: 1px solid #e5e7eb; }
+    ul { padding-left: 18px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>PsychData</h1>
+      <p>A behavioral health analytics project using Python, SQL, and data visualization to explore mental health disparities across racial and ethnic groups.</p>
+      <div class="buttons">
+        <a class="btn" href="https://github.com/KayHowse" target="_blank">View on GitHub</a>
+        <a class="btn secondary" href="README.md">Read the README</a>
+      </div>
+
+      <div class="grid">
+        <div class="panel">
+          <h3>Project focus</h3>
+          <ul>
+            <li>Compares service utilization, access, and treatment across groups</li>
+            <li>Highlights stigma and self-advocacy factors influencing care</li>
+            <li>Shows how Python and SQL can support public-health-style analysis</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Skills demonstrated</h3>
+          <ul>
+            <li>Python data analysis</li>
+            <li>SQLite database design and SQL queries</li>
+            <li>Data visualization with Matplotlib</li>
+            <li>Clear project documentation for employers</li>
+          </ul>
+        </div>
+      </div>
+
+      <img src="psychdata_ethnic_comparison.png" alt="PsychData chart showing mental health disparities" />
+    </div>
+  </div>
+</body>
+</html>
