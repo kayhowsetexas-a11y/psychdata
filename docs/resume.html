@@ -223,6 +223,36 @@
       font-size: 0.92rem;
     }
 
+    .doc-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .doc-card {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--card-soft);
+      padding: 14px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .doc-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      display: block;
+      background: #fff;
+    }
+
+    .doc-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
     .footer-note {
       text-align: center;
       color: var(--muted);
@@ -233,7 +263,8 @@
     @media (max-width: 900px) {
       .hero-grid,
       .grid-2,
-      .grid-3 {
+      .grid-3,
+      .doc-grid {
         grid-template-columns: 1fr;
       }
 
@@ -297,6 +328,27 @@
             <div><a href="https://kayhowsetexas-a11y.github.io/psychdata/" target="_blank" rel="noopener">kayhowsetexas-a11y.github.io/psychdata</a></div>
           </div>
         </aside>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <h3>Updated Resume &amp; Cover Letter</h3>
+      <p class="muted" style="margin: 0 0 12px;">Most recent Business Development documents added July 2026.</p>
+      <div class="doc-grid">
+        <article class="doc-card">
+          <h4 style="margin: 0;">Updated Resume</h4>
+          <img src="assets/resume-business-dev.png" alt="Updated resume for Kay Howse" loading="lazy" />
+          <div class="doc-actions">
+            <a class="button secondary" href="assets/resume-business-dev.png" target="_blank" rel="noopener">Open Resume Image</a>
+          </div>
+        </article>
+        <article class="doc-card">
+          <h4 style="margin: 0;">Updated Cover Letter</h4>
+          <img src="assets/cover-letter-business-dev.png" alt="Updated cover letter for Kay Howse" loading="lazy" />
+          <div class="doc-actions">
+            <a class="button secondary" href="assets/cover-letter-business-dev.png" target="_blank" rel="noopener">Open Cover Letter Image</a>
+          </div>
+        </article>
       </div>
     </section>
 
