@@ -276,6 +276,42 @@ button:focus-visible {
   margin: 24px 0 10px;
 }
 
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.95fr) minmax(0, 1.05fr);
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.about-primary-photo {
+  width: 100%;
+  min-height: 560px;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 24px 60px rgba(15, 50, 32, 0.18);
+  border: 1px solid rgba(38, 106, 71, 0.14);
+}
+
+.about-hero-copy {
+  display: grid;
+  gap: 12px;
+}
+
+.bio-feature-panel {
+  margin: 8px 0 24px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(38, 106, 71, 0.14);
+  box-shadow: 0 18px 40px rgba(15, 50, 32, 0.14);
+}
+
+.bio-feature-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .bio-gallery img {
   width: 100%;
   border-radius: 20px;
@@ -470,12 +506,17 @@ canvas {
   .row-2,
   .chart-row,
   .contact-grid,
-  .bio-gallery {
+  .bio-gallery,
+  .about-hero {
     grid-template-columns: 1fr;
   }
 
   .hero-photo {
     min-height: 320px;
+  }
+
+  .about-primary-photo {
+    min-height: 420px;
   }
 }
 
